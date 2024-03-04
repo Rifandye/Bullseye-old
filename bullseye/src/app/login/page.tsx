@@ -5,7 +5,7 @@ export default function LoginPage() {
     <main
       className="flex min-h-screen w-full justify-center items-center"
       style={{
-        backgroundImage: "url('/background.jpg')",
+        backgroundImage: "url('/regisbackground.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

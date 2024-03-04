@@ -5,7 +5,7 @@ export default function RegisterPage() {
     <main
       className="flex min-h-screen w-full justify-center items-center"
       style={{
-        backgroundImage: "url('/regisbackground.jpg')",
+        backgroundImage: "url('/background.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
