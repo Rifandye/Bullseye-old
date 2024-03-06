@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./login.css";
 
 export default function LoginPage() {
@@ -53,7 +54,9 @@ export default function LoginPage() {
               <button className="button1">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </button>
-              <button className="button2">Sign Up</button>
+              <Link href={"register"} className="button2">
+                Sign Up
+              </Link>
             </div>
             <button className="button3">Forgot Password</button>
           </form>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./register.css";
 
 export default function RegisterPage() {
@@ -46,9 +47,9 @@ export default function RegisterPage() {
               />
             </div>
             <div className="btn">
-              <button type="submit" className="button1">
+              <Link href={"login"} type="submit" className="button1">
                 Register
-              </button>
+              </Link>
             </div>
           </form>
         </div>
