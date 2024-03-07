@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { IProduct } from "../app/types/Product";
-
+  
 interface ProductCardProps {
   product: IProduct;
 }

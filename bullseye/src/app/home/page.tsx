@@ -1,3 +1,4 @@
+import Banner from "../../components/Banner";
 import CardProduct from "../../components/CardProduct";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
@@ -8,24 +9,20 @@ export default async function HomePage() {
   const products: IProduct[] = await response.json();
 
   return (
-    <main>
+    <div>
       <Navbar />
-      <div className="flex justify-center">
-        <img src="/background.jpg" alt="Banner" className="max-w-full h-80" />
-      </div>
+      <Banner />
       <div className="flex justify-center">
         <div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"
           style={{ maxWidth: "1280px" }}
         >
-          {products.map((products) => (
-            <CardProduct product={products} key={products.id} />
+          {products.map((product) => (
+            <CardProduct product={product} key={product.id} />
           ))}
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
-    </main>
+      <Footer />
+    </div>
   );
 }
