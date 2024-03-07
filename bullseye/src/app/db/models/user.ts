@@ -2,6 +2,7 @@ import { getCollection } from "../config";
 import { ObjectId } from "mongodb";
 import { hashPass, comparePass } from "../helpers/bcrypt";
 import { z } from "zod";
+import { signToken } from "../helpers/jwt";
 
 type User = {
   _id: ObjectId;
@@ -12,6 +13,7 @@ type User = {
 };
 
 type NewUserInput = Omit<User, "_id">;
+type UserLoginInput = Omit<User, "_id" | "username">;
 
 const UserInputSchema = z.object({
   name: z.string(),
@@ -49,6 +51,22 @@ class UserModel {
       ...newUser,
       password: hashPass(newUser.password),
     });
+  }
+
+  static async login(userInput: UserLoginInput) {
+    const findUser = await this.getCollection().findOne({
+      email: userInput.email,
+    });
+
+    const comparedPass = comparePass(userInput.password, findUser.password);
+
+    const access_token = signToken({
+      id: findUser._id.toString(),
+      username: findUser.username,
+      email: findUser.email,
+    });
+
+    return access_token;
   }
 }
 
