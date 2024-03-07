@@ -22,6 +22,11 @@ const UserInputSchema = z.object({
   password: z.string().min(5),
 });
 
+const LoginInputSchema = z.object({
+  email: z.string().email(),
+  password: z.string(),
+});
+
 class UserModel {
   static getCollection() {
     return getCollection("Users");
@@ -54,11 +59,25 @@ class UserModel {
   }
 
   static async login(userInput: UserLoginInput) {
+    const parseResult = LoginInputSchema.safeParse(userInput);
+
+    if (!parseResult.success) {
+      throw parseResult.error;
+    }
+
     const findUser = await this.getCollection().findOne({
       email: userInput.email,
     });
 
+    if (!findUser) {
+      throw new Error("Account does not exist");
+    }
+
     const comparedPass = comparePass(userInput.password, findUser.password);
+
+    if (!comparedPass) {
+      throw new Error("Email/Password is invalid");
+    }
 
     const access_token = signToken({
       id: findUser._id.toString(),
