@@ -11,3 +11,9 @@ export interface IProduct {
   updatedAt: string;
   id: string;
 }
+
+export interface ProductDetailPageProps {
+  params: {
+    slug: string;
+  };
+}

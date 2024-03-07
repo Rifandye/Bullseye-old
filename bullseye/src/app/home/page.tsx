@@ -2,7 +2,7 @@ import Banner from "../../components/Banner";
 import CardProduct from "../../components/CardProduct";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
-import { IProduct } from "../types/Product";
+import { IProduct } from "../../types";
 
 export default async function HomePage() {
   const response = await fetch("http://localhost:3001/products");

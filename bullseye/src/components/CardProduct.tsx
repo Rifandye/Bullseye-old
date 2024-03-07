@@ -6,8 +6,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { HeartIcon } from "@heroicons/react/24/outline";
-import { IProduct } from "../app/types/Product";
-  
+import { IProduct } from "../types";
+import Link from "next/link";
+
 interface ProductCardProps {
   product: IProduct;
 }
@@ -25,11 +26,13 @@ export default function CardProduct({ product }: ProductCardProps) {
         >
           {product.images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img
-                src={image}
-                alt={`Product Image ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
+              <Link href={`/products/${product.slug}`}>
+                <img
+                  src={image}
+                  alt={`Product Image ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -40,7 +43,7 @@ export default function CardProduct({ product }: ProductCardProps) {
             <span className="text-xl text-gray-50 font-bold">
               {product.name}
             </span>
-            <p className="text-xs text-gray-400">ID: {product.id}</p>
+            <p className="text-xs text-gray-400">ID: {product.slug}</p>
           </div>
           <span className="font-bold text-red-600">${product.price}</span>
         </div>
