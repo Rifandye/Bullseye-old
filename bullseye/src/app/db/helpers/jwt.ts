@@ -1,7 +1,7 @@
-import * as jwt from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 const secret = process.env.JWT_SECRET as string;
 
-const signToken = (payload: string | object) => {
+const signToken = (payload: JwtPayload) => {
   return jwt.sign(payload, secret);
 };
 

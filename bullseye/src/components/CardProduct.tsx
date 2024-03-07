@@ -14,6 +14,10 @@ interface ProductCardProps {
 }
 
 export default function CardProduct({ product }: ProductCardProps) {
+  function handleWishList() {
+    console.log("wishlist di click");
+  }
+
   return (
     <div className="w-70 h-100 bg-gray-800 p-3 flex flex-col gap-1 rounded-br-3xl relative">
       <div className="flex-grow">
@@ -60,7 +64,11 @@ export default function CardProduct({ product }: ProductCardProps) {
         </button>
       </div>
       <div className="absolute top-0 right-0 p-4 z-10">
-        <HeartIcon className="h-6 w-6 text-red-500 hover:text-blue-500 cursor-pointer" />
+        <HeartIcon
+          className="h-6 w-6 text-red-500 hover:text-blue-500 cursor-pointer"
+          onClick={handleWishList}
+          style={{ cursor: "pointer" }}
+        />
       </div>
     </div>
   );

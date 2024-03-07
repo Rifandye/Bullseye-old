@@ -52,10 +52,15 @@ class UserModel {
       throw new Error("Email already in use");
     }
 
-    return await this.getCollection().insertOne({
+    const result = await this.getCollection().insertOne({
       ...newUser,
       password: hashPass(newUser.password),
     });
+
+    return {
+      _id: result.insertedId,
+      ...newUser,
+    } as User;
   }
 
   static async login(userInput: UserLoginInput) {

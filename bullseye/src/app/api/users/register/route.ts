@@ -1,20 +1,21 @@
 import { ZodError } from "zod";
 import UserModel from "../../../db/models/user";
+import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    await UserModel.register(body);
+    const result = await UserModel.register(body);
 
-    return Response.json({
-      body,
+    return NextResponse.json({
+      data: result,
     });
   } catch (error) {
     console.log(error);
 
     if (error instanceof ZodError) {
       const err = error.issues[0].path + " " + error.issues[0].message;
-      return Response.json(
+      return NextResponse.json(
         {
           error: err,
         },
@@ -24,7 +25,7 @@ export async function POST(request: Request) {
       );
     }
     if (error instanceof Error) {
-      return Response.json(
+      return NextResponse.json(
         {
           error: error.message,
         },
