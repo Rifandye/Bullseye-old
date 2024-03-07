@@ -14,12 +14,7 @@ import {
 } from "swiper/modules";
 
 export default function Banner() {
-  const bannerImages = [
-    "/background.jpg",
-    "/banner1.jpg",
-    "/banner2.jpg",
-    "/banner3.jpg",
-  ];
+  const bannerImages = ["/banner1.jpg", "/banner2.jpg", "/banner3.jpg"];
 
   return (
     <div className="swiper-container my-8">
