@@ -1,6 +1,7 @@
 import { getCollection } from "../config";
 import { ObjectId } from "mongodb";
 import { hashPass, comparePass } from "../helpers/bcrypt";
+import { z } from "zod";
 
 type User = {
   _id: ObjectId;
@@ -12,6 +13,13 @@ type User = {
 
 type NewUserInput = Omit<User, "_id">;
 
+const UserInputSchema = z.object({
+  name: z.string(),
+  username: z.string(),
+  email: z.string().email(),
+  password: z.string().min(5),
+});
+
 class UserModel {
   static getCollection() {
     return getCollection("Users");
@@ -22,14 +30,25 @@ class UserModel {
   }
 
   static async register(newUser: NewUserInput) {
-    try {
-      return await this.getCollection().insertOne({
-        ...newUser,
-        password: hashPass(newUser.password),
-      });
-    } catch (error) {
-      console.log(error);
+    const parseResult = UserInputSchema.safeParse(newUser);
+    console.log(parseResult);
+
+    if (!parseResult.success) {
+      throw parseResult.error;
     }
+
+    const emailUniqueness = await this.getCollection().findOne({
+      email: newUser.email,
+    });
+
+    if (emailUniqueness) {
+      throw new Error("Email already in use");
+    }
+
+    return await this.getCollection().insertOne({
+      ...newUser,
+      password: hashPass(newUser.password),
+    });
   }
 }
 
