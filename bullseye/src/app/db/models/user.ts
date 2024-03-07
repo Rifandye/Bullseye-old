@@ -16,8 +16,8 @@ type NewUserInput = Omit<User, "_id">;
 type UserLoginInput = Omit<User, "_id" | "username">;
 
 const UserInputSchema = z.object({
-  name: z.string(),
-  username: z.string(),
+  name: z.string({ required_error: "Name is required" }),
+  username: z.string({ required_error: "Username is required" }),
   email: z.string().email(),
   password: z.string().min(5),
 });

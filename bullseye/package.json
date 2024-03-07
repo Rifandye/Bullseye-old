@@ -20,6 +20,7 @@
     "react-dom": "^18",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.10.6",
     "swiper": "^11.0.7",
     "zod": "^3.22.4"
   },

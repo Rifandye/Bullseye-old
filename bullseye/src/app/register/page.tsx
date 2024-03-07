@@ -1,7 +1,33 @@
-import Link from "next/link";
 import "./register.css";
+import { redirect } from "next/navigation";
+import SweetAlertComponent from "../../components/SweetAlertComponent";
 
 export default function RegisterPage() {
+  const handleRegister = async (formData: FormData) => {
+    "use server";
+
+    const name = formData.get("name") as string;
+    const username = formData.get("username") as string;
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
+    const response = await fetch("http://localhost:3000/api/users/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, username, email, password }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      return redirect("/register?error=" + result.error);
+    }
+
+    return redirect("/login");
+  };
+
   return (
     <main
       className="flex min-h-screen w-full justify-center items-center"
@@ -11,9 +37,10 @@ export default function RegisterPage() {
         backgroundPosition: "center",
       }}
     >
+      <SweetAlertComponent />
       <div className="card">
         <div className="card2">
-          <form className="form">
+          <form className="form" action={handleRegister}>
             <p id="heading">Register</p>
             <div className="field">
               <input
@@ -21,6 +48,7 @@ export default function RegisterPage() {
                 className="input-field"
                 placeholder="Name"
                 autoComplete="off"
+                name="name"
               />
             </div>
             <div className="field">
@@ -29,14 +57,15 @@ export default function RegisterPage() {
                 className="input-field"
                 placeholder="Username"
                 autoComplete="off"
+                name="username"
               />
             </div>
             <div className="field">
               <input
-                type="email"
                 className="input-field"
                 placeholder="Email"
                 autoComplete="off"
+                name="email"
               />
             </div>
             <div className="field">
@@ -44,12 +73,13 @@ export default function RegisterPage() {
                 type="password"
                 className="input-field"
                 placeholder="Password"
+                name="password"
               />
             </div>
             <div className="btn">
-              <Link href={"login"} type="submit" className="button1">
+              <button type="submit" className="button1">
                 Register
-              </Link>
+              </button>
             </div>
           </form>
         </div>
