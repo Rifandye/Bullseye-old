@@ -1,7 +1,36 @@
 import Link from "next/link";
 import "./login.css";
+import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
+import ClientFlashComponent from "../../components/ClientFlashComponent";
 
 export default function LoginPage() {
+  const handleLogin = async (formData: FormData) => {
+    "use server";
+
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
+    console.log(email, password);
+
+    const response = await fetch("http://localhost:3000/api/users/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      return redirect("/login?error=" + result.error);
+    }
+
+    cookies().set("Authorization", `Bearer ${result.access_token}`);
+
+    return redirect("/home");
+  };
   return (
     <main
       className="flex min-h-screen w-full justify-center items-center"
@@ -13,8 +42,9 @@ export default function LoginPage() {
     >
       <div className="card">
         <div className="card2">
-          <form className="form">
+          <form className="form" action={handleLogin}>
             <p id="heading">Login</p>
+            <ClientFlashComponent />
             <div className="field">
               <svg
                 viewBox="0 0 16 16"
@@ -31,6 +61,7 @@ export default function LoginPage() {
                 className="input-field"
                 placeholder="Email"
                 autoComplete="off"
+                name="email"
               />
             </div>
             <div className="field">
@@ -48,6 +79,7 @@ export default function LoginPage() {
                 type="password"
                 className="input-field"
                 placeholder="Password"
+                name="password"
               />
             </div>
             <div className="btn">
