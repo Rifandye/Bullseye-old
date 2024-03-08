@@ -1,15 +1,27 @@
 import { IProduct, ProductDetailPageProps } from "../../../types";
 import Footer from "../../../components/Footer";
 import Navbar from "../../../components/Navbar";
+import { cookies } from "next/headers";
+
+async function fetchProductData(slug: string): Promise<IProduct> {
+  const response = await fetch(`http://localhost:3000/api/products/${slug}`, {
+    headers: {
+      Cookie: cookies().toString(),
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Fetch failed");
+  }
+  const products: IProduct = await response.json();
+  console.log(products);
+  return products;
+}
 
 export default async function ProductDetail({
   params,
 }: ProductDetailPageProps) {
-  const response = await fetch(
-    `http://localhost:3000/api/products/${params.slug}`
-  );
-  const products: IProduct = await response.json();
-  console.log(products);
+  const products = await fetchProductData(params.slug);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -29,7 +41,7 @@ export default async function ProductDetail({
               <p className="mt-4 text-lg">{products.description}</p>
               <p className="mt-4 text-xl font-semibold">${products.price}</p>
               <button className="px-6 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-700">
-                Add to Cart
+                Add to Wishlist
               </button>
             </div>
           </div>

@@ -4,21 +4,7 @@ import Footer from "../../components/Footer";
 import CardProduct from "../../components/CardProduct";
 import Navbar from "../../components/Navbar";
 import { IProduct } from "../../types";
-// import { cookies } from "next/headers";
 import { useEffect, useState } from "react";
-
-// async function getData(): Promise<IProduct[]> {
-//   const response = await fetch("http://localhost:3000/api/products", {
-//     headers: {
-//       Cookie: cookies().toString(),
-//     },
-//   });
-
-//   if (!response.ok) {
-//     throw new Error("Fetch failed");
-//   }
-//   return response.json();
-// }
 
 export default function Products() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -26,9 +12,7 @@ export default function Products() {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/products", {
-          cache: "no-store",
-        });
+        const response = await fetch("http://localhost:3000/api/products");
         const responseData = await response.json();
         const productsData: IProduct[] = responseData;
         console.log(productsData);

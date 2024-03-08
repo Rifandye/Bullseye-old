@@ -8,7 +8,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { IProduct } from "../types";
 import Link from "next/link";
-import { MouseEvent } from "react";
 
 interface ProductCardProps {
   product: IProduct;
