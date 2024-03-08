@@ -18,7 +18,7 @@ export default async function HomePage() {
           style={{ maxWidth: "1280px" }}
         >
           {products.map((product) => (
-            <CardProduct product={product} key={product.id} />
+            <CardProduct product={product} key={product._id} />
           ))}
         </div>
       </div>

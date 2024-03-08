@@ -5,7 +5,6 @@ import { readPayloadJose } from "./app/db/helpers/jwt";
 export async function middleware(request: NextRequest) {
   try {
     let token = cookies().get("Authorization")?.value.split(" ")[1];
-    console.log(token);
 
     if (!token) {
       return NextResponse.json(
@@ -19,6 +18,7 @@ export async function middleware(request: NextRequest) {
     }
 
     const decoded = await readPayloadJose<{ id: string; email: string }>(token);
+    console.log(decoded.id, "<< decoded");
     const requestHeaders = new Headers(request.headers);
     requestHeaders.set("x-id-user", decoded.id);
     requestHeaders.set("x-email-user", decoded.email);
@@ -37,5 +37,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: "/api/products/:path*",
+  matcher: "/api/wishlists/:path*",
 };

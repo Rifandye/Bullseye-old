@@ -9,7 +9,7 @@ export interface IProduct {
   images: string[];
   createdAt: string;
   updatedAt: string;
-  id: string;
+  _id: string;
 }
 
 export interface ProductDetailPageProps {

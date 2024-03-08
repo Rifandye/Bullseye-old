@@ -8,14 +8,25 @@ import { Navigation, Pagination } from "swiper/modules";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { IProduct } from "../types";
 import Link from "next/link";
+import { MouseEvent } from "react";
 
 interface ProductCardProps {
   product: IProduct;
 }
 
 export default function CardProduct({ product }: ProductCardProps) {
-  function handleWishList() {
+  async function handleWishList(productId: string) {
     console.log("wishlist di click");
+    await fetch("http://localhost:3000/api/wishlists", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // "x-id-user": "USER_ID_HERE",
+      },
+      body: JSON.stringify({
+        productId: productId,
+      }),
+    });
   }
 
   return (
@@ -47,7 +58,7 @@ export default function CardProduct({ product }: ProductCardProps) {
             <span className="text-xl text-gray-50 font-bold">
               {product.name}
             </span>
-            <p className="text-xs text-gray-400">ID: {product.slug}</p>
+            <p className="text-xs text-gray-400">ID: {product._id}</p>
           </div>
           <span className="font-bold text-red-600">${product.price}</span>
         </div>
@@ -66,7 +77,7 @@ export default function CardProduct({ product }: ProductCardProps) {
       <div className="absolute top-0 right-0 p-4 z-10">
         <HeartIcon
           className="h-6 w-6 text-red-500 hover:text-blue-500 cursor-pointer"
-          onClick={handleWishList}
+          onClick={() => handleWishList(product._id)}
           style={{ cursor: "pointer" }}
         />
       </div>

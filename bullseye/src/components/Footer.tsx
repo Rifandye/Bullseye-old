@@ -15,7 +15,6 @@ export default function Footer() {
           </a>
         </div>
         <div className="flex justify-center space-x-4 mt-2">
-          {/* Add SVG icons for social media here */}
           <a href="#" className="hover:text-gray-400">
             Facebook
           </a>

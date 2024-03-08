@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navbar() {
   return (
     <main>
@@ -24,9 +26,11 @@ export default function Navbar() {
               placeholder="Search..."
               className="px-4 py-2 rounded-md text-black"
             />
-            <button className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-              Profile
-            </button>
+            <Link href={"/profile"}>
+              <button className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                Profile
+              </button>
+            </Link>
           </div>
         </div>
       </nav>
