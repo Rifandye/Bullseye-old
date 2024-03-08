@@ -5,8 +5,6 @@ type Wishlist = {
   _id: ObjectId;
   userId: string;
   productId: string;
-  createdAt: Date;
-  updatedAt: Date;
 };
 
 type WishlistInput = Omit<Wishlist, "_id">;
@@ -20,6 +18,8 @@ class WishlistModel {
     const result = await this.getCollection().insertOne({
       productId: new ObjectId(body.productId),
       userId: new ObjectId(body.userId),
+      createdAt: new Date(),
+      updatedAt: new Date(),
     });
     return {
       _id: result.insertedId,
@@ -28,9 +28,44 @@ class WishlistModel {
   }
 
   static async getAllWishlist(userId: string) {
-    return (await this.getCollection()
-      .find({ userId: new ObjectId(String(userId)) })
-      .toArray()) as Wishlist[];
+    const agg = [
+      {
+        $match: {
+          userId: new ObjectId(userId),
+        },
+      },
+      {
+        $lookup: {
+          from: "Users",
+          localField: "userId",
+          foreignField: "_id",
+          as: "userDetail",
+        },
+      },
+      {
+        $unwind: {
+          path: "$userDetail",
+          preserveNullAndEmptyArrays: true,
+        },
+      },
+      {
+        $project: {
+          "userDetail.password": 0,
+        },
+      },
+      {
+        $lookup: {
+          from: "Products",
+          localField: "productId",
+          foreignField: "_id",
+          as: "productDetail",
+        },
+      },
+    ];
+
+    const wishlist = await this.getCollection().aggregate(agg).toArray();
+
+    return wishlist;
   }
 }
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import "./login.css";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-import ClientFlashComponent from "../../components/ClientFlashComponent";
+import ClientFlashComponent from "@/components/ClientFlashComponent";
 
 export default function LoginPage() {
   const handleLogin = async (formData: FormData) => {

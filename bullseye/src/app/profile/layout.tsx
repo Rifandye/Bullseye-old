@@ -1,4 +1,4 @@
-import ServerProtectedComponent from "../../components/ServerProtectedComponent";
+import ServerProtectedComponent from "@/components/ServerProtectedComponent";
 
 export default function RootLayout({
   children,

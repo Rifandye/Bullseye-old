@@ -1,8 +1,8 @@
-import { IProduct, ProductDetailPageProps } from "../../../types";
-import Footer from "../../../components/Footer";
-import Navbar from "../../../components/Navbar";
+import { IProduct, ProductDetailPageProps } from "@/types";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import { cookies } from "next/headers";
-import AddWishListButton from "../../../components/AddWishListButton";
+import AddWishListButton from "@/components/AddWishListButton";
 
 async function fetchProductData(slug: string): Promise<IProduct> {
   const response = await fetch(`http://localhost:3000/api/products/${slug}`, {

@@ -9,8 +9,6 @@ export async function POST(request: Request) {
     const wishlist = await WishlistModel.addWishlist({
       productId: body.productId,
       userId: userId,
-      createdAt: new Date(),
-      updatedAt: new Date(),
     });
     return NextResponse.json({ data: wishlist });
   } catch (error) {

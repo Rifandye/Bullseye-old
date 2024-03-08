@@ -1,6 +1,6 @@
 import "./register.css";
 import { redirect } from "next/navigation";
-import SweetAlertComponent from "../../components/SweetAlertComponent";
+import SweetAlertComponent from "@/components/SweetAlertComponent";
 
 export default function RegisterPage() {
   const handleRegister = async (formData: FormData) => {

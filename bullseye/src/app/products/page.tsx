@@ -1,9 +1,9 @@
 "use client";
 
-import Footer from "../../components/Footer";
-import CardProduct from "../../components/CardProduct";
-import Navbar from "../../components/Navbar";
-import { IProduct } from "../../types";
+import Footer from "@/components/Footer";
+import CardProduct from "@/components/CardProduct";
+import Navbar from "@/components/Navbar";
+import { IProduct } from "@/types";
 import { useEffect, useState } from "react";
 
 export default function Products() {
