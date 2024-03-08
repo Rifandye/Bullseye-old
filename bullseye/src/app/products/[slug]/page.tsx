@@ -6,11 +6,10 @@ export default async function ProductDetail({
   params,
 }: ProductDetailPageProps) {
   const response = await fetch(
-    `http://localhost:3001/products?slug=${params.slug}`
+    `http://localhost:3000/api/products/${params.slug}`
   );
-  const products: IProduct[] = await response.json();
-
-  const product = products[0];
+  const products: IProduct = await response.json();
+  console.log(products);
 
   return (
     <main>
@@ -21,15 +20,15 @@ export default async function ProductDetail({
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2">
             <img
-              src={product.thumbnail}
-              alt={product.name}
+              src={products.thumbnail}
+              alt={products.name}
               className="w-full"
             />
           </div>
           <div className="md:w-1/2 md:pl-10">
-            <h1 className="text-3xl font-bold">{product.name}</h1>
-            <p className="mt-4 text-lg">{product.description}</p>
-            <p className="mt-4 text-xl font-semibold">{product.price}</p>
+            <h1 className="text-3xl font-bold">{products.name}</h1>
+            <p className="mt-4 text-lg">{products.description}</p>
+            <p className="mt-4 text-xl font-semibold">{products.price}</p>
             <button className="px-6 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-700">
               Add to Cart
             </button>

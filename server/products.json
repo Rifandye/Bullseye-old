@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Photon Blaster x2",
+    "slug": "photon-blaster-x2",
+    "description": "The Photon Blaster X2 combines futuristic technology with devastating firepower, designed for elite space rangers.",
+    "excerpt": "Harness the power of photon energy to vanquish foes.",
+    "price": 21500,
+    "tags": ["energy", "space", "ranger"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709835500/filip-leurs-scifigun04_zgyo7s.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709835504/filip-leurs-scifigun12_o0oeal.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709835503/filip-leurs-scifigun02_ednglw.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709835500/filip-leurs-scifigun04_zgyo7s.jpg"
+    ],
+    "createdAt": "2023-05-21T10:15:30.000Z",
+    "updatedAt": "2023-06-10T12:47:45.000Z"
+  },
+  {
+    "name": "Assault Rifle",
+    "slug": "assault-rifle",
+    "description": "A rifle that bends the laws of physics to offer unmatched precision across dimensions.",
+    "excerpt": "Aim beyond the boundaries of reality.",
+    "price": 34999,
+    "tags": ["quantum", "precision", "multidimensional"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709835944/glitch5970-1000_r3rmax.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709835944/glitch5970-1000_r3rmax.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709835944/4464bb90598045b9aa06d4c187f15d95_qyzxzr.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709835944/843ea1b39f5d49348e9c9d7d05f9c006_rn66ks.jpg"
+    ],
+    "createdAt": "2023-07-03T09:22:18.000Z",
+    "updatedAt": "2023-08-15T17:31:09.000Z"
+  },
+  {
+    "name": "Battle Rifle",
+    "slug": "battle-rifle",
+    "description": "Obliterate opponents at an atomic level with the Neutron Disintegrator V5, the ultimate weapon for cosmic warfare.",
+    "excerpt": "Disintegrate adversaries, atom by atom.",
+    "price": 45800,
+    "tags": ["disintegrator", "neutron", "cosmic"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836148/DSC00878_cvzf6v.webp",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836148/DSC00878_cvzf6v.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836150/jared-harris-br55variants_ewqjxf.gif",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836146/ea1a8aaa04324484b1082f46ddd86317_fy2lvo.jpg"
+    ],
+    "createdAt": "2023-09-12T14:06:37.000Z",
+    "updatedAt": "2023-10-29T11:54:23.000Z"
+  },
+  {
+    "name": "Sniper Rifle",
+    "slug": "sniper-rifle",
+    "description": "Precision engineered for the marksman who demands accuracy over vast interstellar distances.",
+    "excerpt": "Accuracy, redefined for the stars.",
+    "price": 37500,
+    "tags": ["sniper", "galactic", "precision"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836353/81636a747ea64d8fb42e9777f8888789_zw4tlz.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836353/81636a747ea64d8fb42e9777f8888789_zw4tlz.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836360/d9ezhwj-1e7cbe8b-0dc1-4966-8783-a8c5e45d4c46_gofs18.png",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836351/HD-wallpaper-sniper-rifle-halo-cool-halo-reach-screen-shot-sniper-spartan_lzpg4i.jpg"
+    ],
+    "createdAt": "2023-11-05T11:32:19.000Z",
+    "updatedAt": "2023-12-20T18:45:33.000Z"
+  },
+  {
+    "name": "Covenant Carbine Repeater",
+    "slug": "covenant-carbine-repeater",
+    "description": "Favored by the Covenant's elite, this rapid-fire plasma weapon combines deadly efficiency with technological elegance. Ideal for suppressing enemy forces.",
+    "excerpt": "Rapid fire, lethal precision.",
+    "price": 75000,
+    "tags": ["Covenant", "plasma", "rapid-fire"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836668/nikos-markoulis-repeater-1-textured_lwslms.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836668/nikos-markoulis-repeater-1-textured_lwslms.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836668/nikos-markoulis-repeater-4-textured_tu1eiw.jpg"
+    ],
+    "createdAt": "2024-03-07T12:00:00.000Z",
+    "updatedAt": "2024-03-07T12:00:00.000Z"
+  },
+  {
+    "name": "Promethean Light Rifle",
+    "slug": "promethean-light-rifle",
+    "description": "An advanced Forerunner weapon that fires hardlight projectiles. Capable of switching between precision and burst-fire modes to adapt to any combat scenario.",
+    "excerpt": "Versatility and power from an ancient civilization.",
+    "price": 95000,
+    "tags": ["Forerunner", "hardlight", "dual-mode"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836866/0e1ff324282b644480e2a28f36237d17df51bfber1-1920-1080v2_uhq_zvxozc.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836866/0e1ff324282b644480e2a28f36237d17df51bfber1-1920-1080v2_uhq_zvxozc.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836865/1438-1694208450-1852686153_tospcs.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836866/81MFgAfI98L._AC_UF894_1000_QL80__rdueku.jpg"
+    ],
+    "createdAt": "2024-03-07T12:00:00.000Z",
+    "updatedAt": "2024-03-07T12:00:00.000Z"
+  },
+  {
+    "name": "UNSC Spartan Laser",
+    "slug": "unsc-spartan-laser",
+    "description": "The Spartan Laser is a heavy-duty, portable directed energy weapon used by the UNSC. It is capable of devastating vehicles and infantry with a single charged shot.",
+    "excerpt": "Unleash the power of a star in the palm of your hand.",
+    "price": 120000,
+    "tags": ["UNSC", "laser", "anti-vehicle"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837071/Spartan_Laser_o90b0z.webp",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837071/Spartan_Laser_o90b0z.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837070/SpartanLaser_jlvffs.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837071/0e9f49a958e4333f07372eb7f46ab75a_xftvpb.jpg"
+    ],
+    "createdAt": "2024-03-07T12:00:00.000Z",
+    "updatedAt": "2024-03-07T12:00:00.000Z"
+  },
+  {
+    "name": "Needler",
+    "slug": "needler",
+    "description": "A unique weapon that fires razor-sharp crystalline projectiles that home in on targets and detonate seconds after embedding, causing massive damage.",
+    "excerpt": "A hail of crystalline death, each shard seeking its target.",
+    "price": 65000,
+    "tags": ["Covenant", "explosive", "homing"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837258/kolby-jukes-needler-new-bg_cr81v3.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837258/kolby-jukes-needler-new-bg_cr81v3.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837255/91Y1Ron_7IL_lkghvo.jpg"
+    ],
+    "createdAt": "2024-03-07T12:00:00.000Z",
+    "updatedAt": "2024-03-07T12:00:00.000Z"
+  },
+  {
+    "name": "R-301 Carbine",
+    "slug": "r-301-carbine",
+    "description": "A fully automatic, versatile assault rifle known for its balance of fire rate, damage, and accuracy. The R-301 Carbine is a favorite among Legends for its adaptability in various combat scenarios.",
+    "excerpt": "Versatility meets reliability.",
+    "price": 30000,
+    "tags": ["assault-rifle", "automatic", "versatile"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837499/shoma-o-r301-2_s9dcjs.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837500/c3124c9cfea741a18aac46b9232a003f_txxr84.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837497/ConceptArt_Ryan_Lastimosa_R-301_Carbine_ld0rei.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837499/shoma-o-r301-2_s9dcjs.jpg"
+    ],
+    "createdAt": "2024-03-07T12:00:00.000Z",
+    "updatedAt": "2024-03-07T12:00:00.000Z"
+  },
+  {
+    "name": "Wingman",
+    "slug": "wingman",
+    "description": "A high-powered revolver with significant damage output. The Wingman demands accuracy but rewards with high damage per shot, making it a lethal choice in skilled hands.",
+    "excerpt": "High risk, high reward.",
+    "price": 20000,
+    "tags": ["revolver", "high-damage", "precision"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837700/71xdnfvMykL_dxos5p.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837700/71xdnfvMykL_dxos5p.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837698/e383ea81-f7ca-4f69-9387-a5019a4064f2.ee7a0c3c19a2d7c37e3a0a07bf1b5916_ea6iek.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837698/eN6uhp1FRqC8ShNM2fPO_1800x_hih1pe.webp"
+    ],
+    "createdAt": "2024-03-07T12:00:00.000Z",
+    "updatedAt": "2024-03-07T12:00:00.000Z"
+  },
+  {
+    "name": "Kraber .50-cal Sniper",
+    "slug": "kraber-50-cal-sniper",
+    "description": "A bolt-action sniper rifle with unparalleled damage. The Kraber .50-cal is capable of downing an enemy with a single shot, making it a coveted weapon in the Apex Games.",
+    "excerpt": "One shot, one kill.",
+    "price": 40000,
+    "tags": ["sniper-rifle", "high-damage", "bolt-action"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837868/Lego-Titanfall-Kraber-AP-sniper-rifle_xcui0o.webp",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837868/Lego-Titanfall-Kraber-AP-sniper-rifle_xcui0o.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709837875/yap-zi-xian-sniper-01-preview-01_iigmf8.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709836351/HD-wallpaper-sniper-rifle-halo-cool-halo-reach-screen-shot-sniper-spartan_lzpg4i.jpg"
+    ],
+    "createdAt": "2024-03-07T12:00:00.000Z",
+    "updatedAt": "2024-03-07T12:00:00.000Z"
+  },
+  {
+    "name": "Prowler Burst PDW",
+    "slug": "prowler-burst-pdw",
+    "description": "A submachine gun that fires in five-round bursts. The Prowler offers a unique firing mechanism that, when mastered, can unleash devastating barrages on enemies at close to medium range.",
+    "excerpt": "Burst fire superiority.",
+    "price": 22000,
+    "tags": ["submachine-gun", "burst-fire", "close-medium-range"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709838036/7d1c5c3bec5d013be27a69e2d234295ac2b982c8-1920x1080_ve4aok.webp",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709838036/7d1c5c3bec5d013be27a69e2d234295ac2b982c8-1920x1080_ve4aok.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709838038/sahil-chhikara-1_zr1ovo.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709838041/jason-labaguis-3_gecocn.jpg"
+    ],
+    "createdAt": "2024-03-07T12:00:00.000Z",
+    "updatedAt": "2024-03-07T12:00:00.000Z"
+  }
+]

@@ -2,9 +2,10 @@ import Footer from "../../components/Footer";
 import CardProduct from "../../components/CardProduct";
 import Navbar from "../../components/Navbar";
 import { IProduct } from "../../types";
+import { useEffect, useState } from "react";
 
 export default async function Products() {
-  const response = await fetch("http://localhost:3001/products");
+  const response = await fetch("http://localhost:3000/api/products");
   const products: IProduct[] = await response.json();
 
   return (

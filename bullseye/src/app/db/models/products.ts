@@ -14,18 +14,19 @@ type Product = {
   updatedAt: string;
 };
 
-type NewProductInput = Omit<Product, "_id" | "createdAt" | "updatedAt">;
-
 class ProductModel {
   static getCollection() {
     return getCollection("Products");
   }
 
-  static async findProduct() {
+  static async getAllProduct() {
     return (await this.getCollection().find().toArray()) as Product[];
   }
 
-  static async addProduct(newProduct: NewProductInput) {}
+  static async getProductBySlug(slug: string) {
+    const product = await this.getCollection().findOne({ slug: slug });
+    return product;
+  }
 }
 
 export default ProductModel;

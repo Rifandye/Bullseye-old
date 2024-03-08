@@ -1,8 +1,8 @@
+import { NextResponse } from "next/server";
+import ProductModel from "../../db/models/products";
 import { ZodError } from "zod";
 
 export async function GET(request: Request) {
-  try {
-  } catch (error) {
-    console.log(error);
-  }
+  const data = await ProductModel.getAllProduct();
+  return NextResponse.json(data);
 }
