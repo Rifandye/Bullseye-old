@@ -1,3 +1,5 @@
+import LogoutButton from "../../components/LogoutButton";
+
 export default function ProfilePage() {
   const wishlistItems = [
     { id: 1, name: "Product 1", description: "This is Product 1" },
@@ -16,9 +18,7 @@ export default function ProfilePage() {
           <div className="mt-4 md:mt-0">
             <h2 className="text-xl font-semibold">Username</h2>
             <p>Email@example.com</p>
-            <button className="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors">
-              Logout
-            </button>
+            <LogoutButton />
           </div>
         </div>
       </div>
