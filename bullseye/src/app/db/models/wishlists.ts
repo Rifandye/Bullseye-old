@@ -26,6 +26,12 @@ class WishlistModel {
       ...body,
     };
   }
+
+  static async getAllWishlist(userId: string) {
+    return (await this.getCollection()
+      .find({ userId: new ObjectId(String(userId)) })
+      .toArray()) as Wishlist[];
+  }
 }
 
 export default WishlistModel;
