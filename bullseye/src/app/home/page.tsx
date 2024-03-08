@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar";
 import { IProduct } from "../../types";
 
 export default async function HomePage() {
-  const response = await fetch("http://localhost:3001/products");
+  const response = await fetch("http://localhost:3000/api/products");
   const products: IProduct[] = await response.json();
 
   return (
