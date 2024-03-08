@@ -21,7 +21,6 @@ export default function CardProduct({ product }: ProductCardProps) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // "x-id-user": "USER_ID_HERE",
       },
       body: JSON.stringify({
         productId: productId,
