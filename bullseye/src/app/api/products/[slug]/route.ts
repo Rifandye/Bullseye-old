@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
 import ProductModel from "../../../db/models/products";
 
-export async function GET(request: Request) {
-  const url = new URL(request.url);
-  const slug = url.pathname.split("/").pop() || "";
+export async function GET(
+  request: Request,
+  { params }: { params: { slug: string } }
+) {
+  const slug = params.slug;
 
   const product = await ProductModel.getProductBySlug(slug);
 

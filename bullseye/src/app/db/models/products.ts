@@ -25,7 +25,7 @@ class ProductModel {
 
   static async getProductBySlug(slug: string) {
     const product = await this.getCollection().findOne({ slug: slug });
-    return product;
+    return product as string;
   }
 }
 
