@@ -1,6 +1,7 @@
 import "./register.css";
 import { redirect } from "next/navigation";
 import SweetAlertComponent from "@/components/SweetAlertComponent";
+import { Suspense } from "react";
 
 export default function RegisterPage() {
   const handleRegister = async (formData: FormData) => {
@@ -11,13 +12,16 @@ export default function RegisterPage() {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
-    const response = await fetch("http://localhost:3000/api/users/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, username, email, password }),
-    });
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/users/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, username, email, password }),
+      }
+    );
 
     const result = await response.json();
 
@@ -37,7 +41,9 @@ export default function RegisterPage() {
         backgroundPosition: "center",
       }}
     >
-      <SweetAlertComponent />
+      <Suspense fallback={<div>Loading error message...</div>}>
+        <SweetAlertComponent />
+      </Suspense>
       <div className="card">
         <div className="card2">
           <form className="form" action={handleRegister}>

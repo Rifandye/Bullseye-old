@@ -3,6 +3,7 @@ import "./login.css";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import ClientFlashComponent from "@/components/ClientFlashComponent";
+import { Suspense } from "react";
 
 export default function LoginPage() {
   const handleLogin = async (formData: FormData) => {
@@ -13,13 +14,16 @@ export default function LoginPage() {
 
     console.log(email, password);
 
-    const response = await fetch("http://localhost:3000/api/users/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_BASE_URL + "/api/users/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      }
+    );
 
     const result = await response.json();
 
@@ -44,7 +48,9 @@ export default function LoginPage() {
         <div className="card2">
           <form className="form" action={handleLogin}>
             <p id="heading">Login</p>
-            <ClientFlashComponent />
+            <Suspense fallback={<div>Loading error message...</div>}>
+              <ClientFlashComponent />
+            </Suspense>
             <div className="field">
               <svg
                 viewBox="0 0 16 16"

@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function AboutPage() {
@@ -13,7 +14,7 @@ export default function AboutPage() {
           </h1>
           <div className="flex flex-col md:flex-row gap-10">
             <div className="md:w-1/2">
-              <img
+              <Image
                 src="/banner1.jpg"
                 alt="About Bullseye"
                 className="rounded-lg shadow-md transform hover:scale-105 transition duration-500 ease-in-out"
@@ -24,9 +25,9 @@ export default function AboutPage() {
                 Bullseye is an innovative platform dedicated to the ethical and
                 responsible sale of firearms. Our mission is to provide a secure
                 and trusted environment for firearm enthusiasts to purchase
-                their gear. Whether you're a seasoned marksman or a responsible
-                citizen seeking to exercise your second amendment rights,
-                Bullseye is your go-to destination.
+                their gear. Whether you&aposre a seasoned marksman or a
+                responsible citizen seeking to exercise your second amendment
+                rights, Bullseye is your go-to destination.
               </p>
               <p className="text-lg">
                 As a platform, we are deeply committed to promoting safety,

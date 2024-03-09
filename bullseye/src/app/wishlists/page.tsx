@@ -12,6 +12,7 @@ import DeleteWishlistButton from "@/components/DeleteWishListButton";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+
 interface UserDetailType {
   _id: string;
   name: string;
@@ -46,9 +47,12 @@ export default function ProfilePage() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/wishlists", {
-          cache: "no-store",
-        });
+        const response = await fetch(
+          process.env.NEXT_PUBLIC_BASE_URL + "/api/wishlists",
+          {
+            cache: "no-store",
+          }
+        );
         const responseData = await response.json();
         const wishListData: WishListType[] = responseData.data;
 
@@ -69,9 +73,12 @@ export default function ProfilePage() {
   //tidak bisa pakai route.refresh karna fetching terjadi di client side component, harus SSR
   const fetchWishLists = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/wishlists", {
-        cache: "no-store",
-      });
+      const response = await fetch(
+        process.env.NEXT_PUBLIC_BASE_URL + "/api/wishlists",
+        {
+          cache: "no-store",
+        }
+      );
       const responseData = await response.json();
       const wishListData = responseData.data;
 

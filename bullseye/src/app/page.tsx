@@ -3,11 +3,15 @@ import CardProduct from "@/components/CardProduct";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { IProduct } from "@/types";
-import { useEffect } from "react";
 
 async function fethData() {
   try {
-    const response = await fetch(`http://localhost:3000/api/products`);
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_BASE_URL + `/api/products`,
+      {
+        cache: "force-cache",
+      }
+    );
     const { data } = await response.json();
 
     if (!response.ok) {
@@ -36,7 +40,7 @@ export default async function HomePage() {
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"
           style={{ maxWidth: "1280px" }}
         >
-          {products.map((product: IProduct) => (
+          {products?.map((product: IProduct) => (
             <CardProduct product={product} key={product._id} />
           ))}
         </div>

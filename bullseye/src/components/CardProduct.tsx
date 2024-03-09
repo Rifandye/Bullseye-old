@@ -23,7 +23,7 @@ export default function CardProduct({ product }: ProductCardProps) {
     setIsWishlisted(!isWishlisted);
 
     if (!isWishlisted) {
-      await fetch("http://localhost:3000/api/wishlists", {
+      await fetch(process.env.NEXT_PUBLIC_BASE_URL + "/api/wishlists", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,11 +48,9 @@ export default function CardProduct({ product }: ProductCardProps) {
           {product.images.map((image, index) => (
             <SwiperSlide key={index}>
               <Link href={`/products/${product.slug}`}>
-                <img
-                  src={image}
-                  alt={`Product Image ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
+                <div className="relative w-full h-full">
+                  <img src={image} alt={`Product Image ${index + 1}`} />
+                </div>
               </Link>
             </SwiperSlide>
           ))}

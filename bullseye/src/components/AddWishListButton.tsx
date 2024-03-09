@@ -9,7 +9,7 @@ interface AddWishListButtonProps {
 export default function AddWishListButton({ product }: AddWishListButtonProps) {
   async function handleWishListButton(productId: string) {
     console.log("wishlist di click");
-    await fetch("http://localhost:3000/api/wishlists", {
+    await fetch(process.env.NEXT_PUBLIC_BASE_URL + "/api/wishlists", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

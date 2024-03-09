@@ -22,7 +22,7 @@ export default function Products() {
       const query = `?page=${currentPage}&limit=${productsPerPage}&search=${searchQuery}`;
       try {
         const response = await fetch(
-          `http://localhost:3000/api/products${query}`
+          process.env.NEXT_PUBLIC_BASE_URL + `/api/products${query}`
         );
         const { data, totalData } = await response.json();
         if (useInfiniteScroll && currentPage > 1) {

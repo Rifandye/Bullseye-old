@@ -13,7 +13,7 @@ export default function DeleteWishlistButton({
 }: DeleteWishlistButtonProps) {
   const router = useRouter(); //tidak jalan
   async function handleDelete() {
-    await fetch(`http://localhost:3000/api/wishlists/${_id}`, {
+    await fetch(process.env.NEXT_PUBLIC_BASE_URL + `/api/wishlists/${_id}`, {
       method: "DELETE",
     });
     onDeleteSuccess();

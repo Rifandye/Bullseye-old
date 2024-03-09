@@ -14,6 +14,7 @@ import {
 } from "swiper/modules";
 import Link from "next/link";
 
+
 export default function Banner() {
   const bannerImages = ["/banner5.jpg", "/banner1.avif", "/banner3.jpg"];
 
