@@ -29,7 +29,7 @@ export default function LoginPage() {
 
     cookies().set("Authorization", `Bearer ${result.access_token}`);
 
-    return redirect("/home");
+    return redirect("/");
   };
   return (
     <main

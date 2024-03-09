@@ -19,7 +19,7 @@ class ProductModel {
     return getCollection("Products");
   }
 
-  static async getAllProduct(page = 1, limit = 10, searchQuery?: string) {
+  static async getAllProduct(page = 1, limit = 8, searchQuery?: string) {
     const skips = limit * (page - 1);
     let query = {};
 

@@ -15,10 +15,10 @@ import {
 import Link from "next/link";
 
 export default function Banner() {
-  const bannerImages = ["/banner1.jpg", "/banner2.jpg", "/banner3.jpg"];
+  const bannerImages = ["/banner5.jpg", "/banner1.avif", "/banner3.jpg"];
 
   return (
-    <div className="relative my-8">
+    <div className="relative">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
