@@ -19,13 +19,31 @@ class ProductModel {
     return getCollection("Products");
   }
 
-  static async getAllProduct(page = 1, limit = 10) {
+  static async getAllProduct(page = 1, limit = 10, searchQuery?: string) {
     const skips = limit * (page - 1);
-    return (await this.getCollection()
-      .find()
+    let query = {};
+
+    if (searchQuery) {
+      query = {
+        name: { $regex: searchQuery, $options: "i" },
+      };
+    }
+
+    const data = await this.getCollection()
+      .find(query)
       .skip(skips)
       .limit(limit)
-      .toArray()) as Product[];
+      .toArray();
+
+    const count = await this.getCollection().countDocuments(query);
+
+    return {
+      data,
+      totalData: count,
+      page,
+      totalPage: Math.ceil(count / limit),
+      limit,
+    };
   }
 
   static async getProductBySlug(slug: string) {
