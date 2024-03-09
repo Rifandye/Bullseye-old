@@ -3,6 +3,33 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { cookies } from "next/headers";
 import AddWishListButton from "@/components/AddWishListButton";
+import type { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const slug = params.slug;
+
+  // fetch data
+  const product = await fetchProductData(slug);
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: product.name,
+    openGraph: {
+      images: ["/some-specific-page-image.jpg", ...previousImages],
+    },
+  };
+}
 
 async function fetchProductData(slug: string): Promise<IProduct> {
   const response = await fetch(`http://localhost:3000/api/products/${slug}`, {
