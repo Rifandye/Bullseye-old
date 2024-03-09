@@ -4,7 +4,7 @@ import { ObjectId } from "mongodb";
 type Product = {
   _id: ObjectId;
   slug: string;
-  desciption: string;
+  description: string;
   excerpt: string;
   price: number;
   tags: [string];
@@ -19,8 +19,13 @@ class ProductModel {
     return getCollection("Products");
   }
 
-  static async getAllProduct() {
-    return (await this.getCollection().find().toArray()) as Product[];
+  static async getAllProduct(page = 1, limit = 10) {
+    const skips = limit * (page - 1);
+    return (await this.getCollection()
+      .find()
+      .skip(skips)
+      .limit(limit)
+      .toArray()) as Product[];
   }
 
   static async getProductBySlug(slug: string) {

@@ -12,12 +12,13 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
+import Link from "next/link";
 
 export default function Banner() {
   const bannerImages = ["/banner1.jpg", "/banner2.jpg", "/banner3.jpg"];
 
   return (
-    <div className="swiper-container my-8">
+    <div className="relative my-8">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
@@ -37,6 +38,14 @@ export default function Banner() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <Link href={"/products"}>
+        <button
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none"
+          type="button"
+        >
+          Go Shops
+        </button>
+      </Link>
     </div>
   );
 }

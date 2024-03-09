@@ -188,5 +188,154 @@
     ],
     "createdAt": "2024-03-07T12:00:00.000Z",
     "updatedAt": "2024-03-07T12:00:00.000Z"
+  },
+  {
+    "name": "BFG 9000",
+    "slug": "bfg-9000",
+    "description": "The Big Fragging Gun (BFG) 9000 is a weapon of mass destruction from the DOOM series, capable of annihilating any demon in its path with a massive green plasma ball.",
+    "excerpt": "Unleash the ultimate power against the forces of hell.",
+    "price": 50000,
+    "tags": ["plasma", "doom", "destruction"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709964657/Doom_1_BFG_9000_Redraw_re5nse.webp",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709964657/Doom_1_BFG_9000_Redraw_re5nse.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709964657/834-1636310262-1384122669_bdpnee.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709964656/images_q1bwml.jpg"
+    ],
+    "createdAt": "2023-08-15T14:30:22.000Z",
+    "updatedAt": "2023-09-10T11:20:33.000Z"
+  },
+
+  {
+    "name": "DL-44 Heavy Blaster Pistol",
+    "slug": "dl-44-heavy-blaster-pistol",
+    "description": "The DL-44 Heavy Blaster Pistol is one of the most powerful blaster pistols in the galaxy, famously used by Han Solo.",
+    "excerpt": "Pack a punch like Han Solo with the galaxy-renowned DL-44.",
+    "price": 7500,
+    "tags": ["blaster", "starwars", "han solo"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709964859/5e7ef1a460b845acac3ca0cfce2ba54d_kldyge.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709964859/5e7ef1a460b845acac3ca0cfce2ba54d_kldyge.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709964860/Han_Solo_DL-44_SWIconsHS_levmp5.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709964858/download_repimx.jpg"
+    ],
+    "createdAt": "2023-03-14T10:15:30.000Z",
+    "updatedAt": "2023-04-10T12:47:45.000Z"
+  },
+  {
+    "name": "E-11 Blaster Rifle",
+    "slug": "e-11-blaster-rifle",
+    "description": "The standard issue blaster rifle for Imperial stormtroopers, known for its versatility and reliability across various conditions.",
+    "excerpt": "Embrace the standard of the Empire's might with the E-11.",
+    "price": 12000,
+    "tags": ["blaster", "starwars", "empire"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709965400/e11-standard-blaster-166-p_jgycky.png",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709965400/e11-standard-blaster-166-p_jgycky.png",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709965394/E-11_blaster_rifle_DICE_ptcp5q.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709965384/1152215387_1_esmkvq.webp"
+    ],
+    "createdAt": "2023-05-21T09:22:18.000Z",
+    "updatedAt": "2023-06-15T17:31:09.000Z"
+  },
+  {
+    "name": "Lightsaber",
+    "slug": "lightsaber",
+    "description": "The Lightsaber, a weapon for the Jedi and Sith alike, is as much a symbol of the force as it is a weapon. It's capable of cutting through virtually anything and deflecting blaster bolts.",
+    "excerpt": "Wield the iconic weapon of the Jedi and Sith.",
+    "price": 25000,
+    "tags": ["lightsaber", "jedi", "sith", "force"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709965718/lightsaber6_nopj72.webp",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709965718/lightsaber6_nopj72.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709965697/611WPi9t5EL._AC_UF894_1000_QL80__nmy9on.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709965727/X5A0721_381c08be-d185-43bf-96fe-e17fb111a06e_qzsxbz.webp"
+    ],
+    "createdAt": "2023-07-29T15:00:30.000Z",
+    "updatedAt": "2023-08-19T09:45:20.000Z"
+  },
+  {
+    "name": "Bowcaster",
+    "slug": "bowcaster",
+    "description": "The Bowcaster, traditionally wielded by Wookiees, is a crossbow-like weapon that fires powerful energy blasts. Chewbacca's weapon of choice.",
+    "excerpt": "Channel the strength of Chewbacca with this Wookiee weapon.",
+    "price": 18000,
+    "tags": ["bowcaster", "wookiee", "chewbacca"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709967667/Bowcaster_DICE_vdsr8k.webp",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709967666/download_2_mlh8dd.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709967666/download_1_utwi43.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709967667/Bowcaster_DICE_vdsr8k.webp"
+    ],
+    "createdAt": "2023-09-03T11:22:33.000Z",
+    "updatedAt": "2023-10-11T12:34:56.000Z"
+  },
+  {
+    "name": "Kang Tao G-58 Dian",
+    "slug": "kang-tao-g-58-dian",
+    "description": "The Kang Tao G-58 Dian is a smart rifle equipped with guided projectiles, ensuring high accuracy over distance. Its sleek design and deadly efficiency make it a favorite among tech-savvy mercenaries.",
+    "excerpt": "Precision and technology meet in this advanced smart rifle.",
+    "price": 34000,
+    "tags": ["smart-rifle", "high-accuracy", "cyberpunk-2077", "Kang-Tao"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968019/img_20210311_160206_oy0h5l.webp",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968019/img_20210311_160206_oy0h5l.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968019/il_570xN.3057373942_smrp_ncrgbo.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968020/4vl4c8k2bf241_jfof5i.webp"
+    ],
+    "createdAt": "2023-10-05T12:30:00.000Z",
+    "updatedAt": "2023-12-15T09:45:00.000Z"
+  },
+  {
+    "name": "Liberty",
+    "slug": "liberty",
+    "description": "Liberty is a powerful and customizable pistol known for its reliability and the ability to deliver devastating damage. A favorite among Night City's elite, it combines sleek design with lethal efficiency.",
+    "excerpt": "A high-powered pistol that brings both style and substance to any fight.",
+    "price": 25000,
+    "tags": ["pistol", "customizable", "cyberpunk-2077", "high-damage"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968197/constitutional_arms_liberty_cyberpunk_2077_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_3487410_o_t8b9jy.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968197/constitutional_arms_liberty_cyberpunk_2077_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_3487410_o_t8b9jy.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968196/images_cyberpunk2077_weapons_liberty_giuolh.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968200/Phantom_Liberty_Keyart_Cover_CP2077PL_pozxdu.webp"
+    ],
+    "createdAt": "2024-01-10T10:30:00.000Z",
+    "updatedAt": "2024-02-20T12:40:00.000Z"
+  },
+  {
+    "name": "Mjölnir",
+    "slug": "mjolnir",
+    "description": "Mjölnir is the legendary hammer wielded by Thor, crafted by dwarven blacksmiths. It is said that only those who are deemed worthy can lift Mjölnir. The hammer is capable of controlling the weather, flying, and summoning lightning.",
+    "excerpt": "The legendary hammer of Thor, capable of unleashing the fury of the storms.",
+    "tags": [
+      "Norse mythology",
+      "Marvel",
+      "Hammer",
+      "Weather control",
+      "Lightning"
+    ],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968408/FIGF35605L0_1_aoauvm.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968408/FIGF35605L0_1_aoauvm.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968412/mjoelnir-thors-hammer-bedeutung_wpk0ao.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968413/Mjolnir_u6ypvd.webp"
+    ],
+    "createdAt": "2024-03-09T10:30:00.000Z",
+    "updatedAt": "2024-03-09T11:00:00.000Z"
+  },
+  {
+    "name": "Stormbreaker",
+    "slug": "stormbreaker",
+    "description": "Stormbreaker is an enchanted axe that was created for Thor in the Marvel Universe. It is capable of summoning the Bifrost, which allows Thor to travel across the universe. It was forged to help Thor combat the threat of Thanos.",
+    "excerpt": "An enchanted axe that rivals the power of Mjölnir, designed to summon the Bifrost.",
+    "tags": ["Marvel", "Axe", "Bifrost", "Space travel"],
+    "thumbnail": "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968528/71R32ZRODgL._AC_UF894_1000_QL80__ccngrd.jpg",
+    "images": [
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968528/71R32ZRODgL._AC_UF894_1000_QL80__ccngrd.jpg",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968528/1-1-Thor-Kapak-Stormbreaker-Thor-S-Hammer-Thunder-Cosplay-Senjata-Avengers-Peran-Bermain-Model-Kapten_nd7fzc.webp",
+      "https://res.cloudinary.com/dpsupok6p/image/upload/v1709968528/1-1-Thor-Kapak-Stormbreaker-Thor-S-Hammer-Thunder-Cosplay-Senjata-Avengers-Peran-Bermain-Model-Kapten_nd7fzc.webp"
+    ],
+    "createdAt": "2024-03-10T12:45:00.000Z",
+    "updatedAt": "2024-03-10T13:20:00.000Z"
   }
 ]

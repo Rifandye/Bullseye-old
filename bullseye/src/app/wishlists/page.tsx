@@ -8,6 +8,14 @@ import { Navigation, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 import LogoutButton from "@/components/LogoutButton";
 import Link from "next/link";
+import DeleteWishlistButton from "@/components/DeleteWishListButton";
+
+interface UserDetailType {
+  _id: string;
+  name: string;
+  username: string;
+  email: string;
+}
 
 interface ProductType {
   _id: string;
@@ -23,6 +31,7 @@ interface WishListType {
   _id: string;
   productId: string;
   userId: string;
+  userDetail: UserDetailType;
   createdAt: string;
   updatedAt: string;
   productDetail: ProductType[];
@@ -30,13 +39,22 @@ interface WishListType {
 
 export default function ProfilePage() {
   const [wishlists, setWishList] = useState<WishListType[]>([]);
+  const [user, setUser] = useState({ username: "", email: "" });
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/wishlists");
+        const response = await fetch("http://localhost:3000/api/wishlists", {
+          cache: "no-store",
+        });
         const responseData = await response.json();
         const wishListData: WishListType[] = responseData.data;
+
+        if (wishListData.length > 0) {
+          const userDetails = wishListData[0].userDetail;
+          setUser({ username: userDetails.username, email: userDetails.email });
+        }
+
         console.log(wishListData);
         setWishList(wishListData);
       } catch (error) {
@@ -44,6 +62,30 @@ export default function ProfilePage() {
       }
     };
     getData();
+  }, []);
+
+  //tidak bisa pakai route.refresh karna fetching terjadi di client side component, harus SSR
+  const fetchWishLists = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/api/wishlists", {
+        cache: "no-store",
+      });
+      const responseData = await response.json();
+      const wishListData = responseData.data;
+
+      if (wishListData.length > 0) {
+        const userDetails = wishListData[0].userDetail;
+        setUser({ username: userDetails.username, email: userDetails.email });
+      }
+
+      setWishList(wishListData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchWishLists();
   }, []);
 
   return (
@@ -55,8 +97,8 @@ export default function ProfilePage() {
             <div className="w-24 h-24 bg-gray-300 rounded-full"></div>
           </div>
           <div className="mt-4 md:mt-0">
-            <h2 className="text-xl font-semibold">Username</h2>
-            <p>Email@example.com</p>
+            <h2 className="text-xl font-semibold">{user.username}</h2>
+            <p>{user.email}</p>
             <LogoutButton />
           </div>
         </div>
@@ -112,10 +154,10 @@ export default function ProfilePage() {
                     </span>
                   ))}
                 </div>
-
-                <button className="hover:bg-sky-700 text-gray-50 bg-sky-800 py-2 rounded-br-xl self-start mt-auto">
-                  Add to cart
-                </button>
+                <DeleteWishlistButton
+                  _id={wishlistItem._id}
+                  onDeleteSuccess={fetchWishLists}
+                />
               </div>
             </div>
           ))
