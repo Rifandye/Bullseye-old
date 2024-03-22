@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import { cookies } from "next/headers";
 import AddWishListButton from "@/components/AddWishListButton";
 import type { Metadata, ResolvingMetadata } from "next";
-import Image from "next/image";
 
 type Props = {
   params: { slug: string };
@@ -62,7 +61,7 @@ export default async function ProductDetail({
         <div className="container mx-auto mt-10">
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2">
-              <Image
+              <img
                 src={product.thumbnail}
                 alt={product.name}
                 className="w-full"
