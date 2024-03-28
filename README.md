@@ -5,9 +5,8 @@ Bullseye is an innovative e-commerce platform with a unique emphasis on the wish
 ## Features
 
 - **Wishlist Management**: Bullseye puts the wishlist feature front and center, allowing users to easily add, remove, and manage items they desire.
-- **User-Friendly Interface**: The platform boasts an intuitive interface designed to enhance user experience and streamline the shopping process.
 
-- **Secure Transactions**: With robust security measures in place, users can shop with confidence knowing their transactions are secure.
+- **User-Friendly Interface**: The platform boasts an intuitive interface designed to enhance user experience and streamline the shopping process.
 
 - **Responsive Design**: Bullseye is built to be responsive across various devices, ensuring a consistent and enjoyable experience for users on desktop, tablet, and mobile.
 
