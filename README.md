@@ -1,53 +1,34 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=14144978&assignment_repo_type=AssignmentRepo)
-# My eCommerce App
+# Bullseye E-Commerce Platform
 
-## Tujuan Pembelajaran
+Bullseye is an innovative e-commerce platform with a unique emphasis on the wishlist feature. It aims to provide users with a seamless shopping experience while prioritizing their wishlist needs. Built using React and Next.js, Bullseye offers an interactive website that excels in both user engagement and search engine optimization (SEO).
 
-- Student mampu membuat aplikasi server dengan menggunakan menggunakan Typescript, NEXT.js dan melakukan proses CRUD dengan database MongoDB
-- Student mampu membuat web aplikasi dengan menggunakan framework NEXT.js
-- Student mampu menghandle navigasi pada NEXT.js
-- Student mampu menghandle authentikasi pada NEXT.js
-- Student mampu mengimplementasikan CSR & SSR pada NEXT.js
+## Features
 
-## Aturan Umum
+- **Wishlist Management**: Bullseye puts the wishlist feature front and center, allowing users to easily add, remove, and manage items they desire.
+- **User-Friendly Interface**: The platform boasts an intuitive interface designed to enhance user experience and streamline the shopping process.
 
-Challenge Hacktiv8 bersifat latihan WAJIB yang menjunjung tinggi INTEGRITAS. Segala bentuk ketidakjujuran meliputi peniruan, plagiarisme, pemalsuan pengerjaan akan mendapatkan tindakan tegas dari akademik.
+- **Secure Transactions**: With robust security measures in place, users can shop with confidence knowing their transactions are secure.
 
-Untuk melatih best practice di lapangan kerja, student diharuskan untuk melakukan git commit minimal 1 hari 4 kali dengan message yang deskriptif atau commit message yang sesuai
+- **Responsive Design**: Bullseye is built to be responsive across various devices, ensuring a consistent and enjoyable experience for users on desktop, tablet, and mobile.
 
-## Ringkasan
+- **SEO Optimization**: Leveraging the power of React and Next.js, Bullseye is optimized for search engines, increasing visibility and attracting more potential customers.
 
-My eCommerce App adalah sebuah web aplikasi yang dibangun menguunakan Typescript , framework NEXT.js dan database MongoDB, jadi kerjakan dengan baik sebagai bekal portofolio kamu.
+## Technologies Used
 
-Pada challenge ini, kamu diminta untuk membuat aplikasi client-server dengan detail sebagai berikut:
+- **React**: A JavaScript library for building user interfaces, providing a dynamic and interactive experience for Bullseye users.
 
-### Halaman
+- **Next.js**: A React framework that enables server-side rendering and generates static websites, making Bullseye fast and SEO-friendly.
 
-- [ ] Halaman Register
-- [ ] Halaman Login
-- [ ] Halaman Home
-  - [ ] Banner Promo
-  - [ ] Detail info Ecommerce
-  - [ ] Featured Product (5-10 product) + “see-all”
-- [ ] Halaman Product
-- [ ] List Product
-  - [ ] Fitur Search
-  - [ ] Fitur Pagination (menggunakan infinite scroll)
-  - [ ] Fitur Add to wishlist
-- [ ] Halaman Detail Product
-  - [ ] Fitur Add to wishlist
-  - [ ] Implementasi Meta Tag di Head sesuai detail product
-- [ ] Halaman Wishlist Product
-  - [ ] List Wishlist
-  - [ ] Fitur Remove Wishlist
+- **HTML/CSS**: The foundation of Bullseye's design, ensuring a visually appealing and responsive layout.
 
-### Fitur
+## Try It Out
 
-- [ ] Fitur register
-- [ ] Fitur login
-- [ ] Fitur show list product
-- [ ] Fitur show detail product
-- [ ] Fitur add to wishlist
-- [ ] Fitur remove wishlist
-- [ ] Fitur search product berdasarkan nama (implement menerapkan debounce)
-- [ ] Fitur pagination (implement infinite scroll)
+Check out Bullseye in action [here](https://bullseye-nu.vercel.app/).
+
+## Contact
+
+For any inquiries or feedback, feel free to contact me at [rilfransyah@gmail.com](mailto:rilfransyah@gmail.com).
+
+---
+
+Bullseye - Your Destination for Seamless Shopping Experience
