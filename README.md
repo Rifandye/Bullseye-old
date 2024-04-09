@@ -30,4 +30,4 @@ For any inquiries or feedback, feel free to contact me at [rilfransyah@gmail.com
 
 ---
 
-Bullseye - Your Destination for Seamless Shopping Experience
+Bullseye - Your Destination for Seamless Shopping Experience!
